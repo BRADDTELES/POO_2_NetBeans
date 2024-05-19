@@ -4,3 +4,10 @@ L14EX03/
 L14EX06/
 L15EX02/
 .gitignore/
+/AgendaJdbcSwingOriginal/build/
+/AgendaJdbcSwingOriginal/nbproject/private/
+/AF_1/Aluno/nbproject/private/
+/AF_1/Aluno/build/
+/AgendaJDBC-Swing/build/
+/AlunoAF2/nbproject/private/
+/AlunoAF2/build/
