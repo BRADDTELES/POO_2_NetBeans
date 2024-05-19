@@ -8,13 +8,6 @@
  * User: root
  * Password: root
  * MySql Local tem que estar em execução
- * 
- * CONEXÃO usando o Banco de Dados Azure na nuvem
- * String URL: jdbc:mysql://cluster-db-azure.mysql.database.azure.com:3306/aluno
- * User: danillo
- * Password: rootD@n1llo
- * CONECTAR NO TERMINAL BASH, usar esses comandos abaixo:
- * mysql -h cluster-db-azure.mysql.database.azure.com -u danillo -p ''
  */
 package conexao;
 
@@ -22,9 +15,9 @@ import java.sql.*;
 
 public class FabricaConexaoMysql {
     
-    private static final String URL_DB = "jdbc:mysql://cluster-db-azure.mysql.database.azure.com:3306/aluno";
-    private static final String USER_BD = "danillo";
-    private static final String PWD_BD = "rootD@n1llo";
+    private static final String URL_DB = "jdbc:mysql://localhost:3306/aluno";
+    private static final String USER_BD = "root1";
+    private static final String PWD_BD = "root";
     
     public static Connection getConnection(){
         
