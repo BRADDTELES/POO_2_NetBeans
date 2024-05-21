@@ -235,9 +235,9 @@ public class SignUp extends javax.swing.JFrame {
         //System.out.println("Clicou");
         String fullName, Email, Password, query;
         String URL_DB, USER_BD, PWD_BD;
-        URL_DB = "jdbc:MySQL://localhost:3306/java_user_database";
-        USER_BD = "root1";
-        PWD_BD = "root";
+        URL_DB = "jdbc:mysql://cluster-db-azure.mysql.database.azure.com:3306/login";
+        USER_BD = "danillo";
+        PWD_BD = "rootD@n1llo";
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(URL_DB, USER_BD, PWD_BD);

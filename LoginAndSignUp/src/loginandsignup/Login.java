@@ -231,9 +231,9 @@ public class Login extends javax.swing.JFrame {
         //System.out.println("Clicou");
         String Email, Password, query, fname = null, passDB = null;
         String URL_DB, USER_BD, PWD_BD;
-        URL_DB = "jdbc:MySQL://localhost:3306/java_user_database";
-        USER_BD = "root1";
-        PWD_BD = "root";
+        URL_DB = "jdbc:mysql://cluster-db-azure.mysql.database.azure.com:3306/login";
+        USER_BD = "danillo";
+        PWD_BD = "rootD@n1llo";
         int notFound = 0;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -262,7 +262,7 @@ public class Login extends javax.swing.JFrame {
                     HomeFrame.setLocationRelativeTo(null);
                     this.dispose();
                 } else {
-                    JOptionPane.showMessageDialog(new JFrame(), "E-mail ou Senha estão incorretos", "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(new JFrame(), "E-mail ou Senha estão incorretos. Digite novamente", "Error", JOptionPane.ERROR_MESSAGE);
                 }
                 password.setText("");
             }

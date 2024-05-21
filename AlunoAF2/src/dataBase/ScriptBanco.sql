@@ -1,7 +1,4 @@
-/*
-CONECTAR NO TERMINAL BASH, usar esses comandos abaixo:
-mysql -h cluster-db-azure.mysql.database.azure.com -u danillo -p ''
-*/
+
 CREATE DATABASE IF NOT EXISTS aluno;
 USE aluno;
 CREATE TABLE IF NOT EXISTS registro
