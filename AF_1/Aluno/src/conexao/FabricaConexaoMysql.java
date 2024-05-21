@@ -4,9 +4,9 @@ import java.sql.*;
 
 public class FabricaConexaoMysql {
     public static String status = "Não conectou...";
-    private static final String URL_DB = "jdbc:mysql://cluster-db-azure.mysql.database.azure.com:3306/aluno?useSSL=true&requireSSL=false";
-    private static final String USER_BD = "danillo";
-    private static final String PWD_BD = "93820041D@n";
+    private static final String URL_DB = "jdbc:mysql://localhost:3306/aluno";
+    private static final String USER_BD = "root1";
+    private static final String PWD_BD = "root";
     public static Connection getConnection(){
         Connection conexao = null;
         try{
