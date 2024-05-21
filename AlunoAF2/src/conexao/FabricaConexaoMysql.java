@@ -16,8 +16,8 @@ import java.sql.*;
 public class FabricaConexaoMysql {
     
     private static final String URL_DB = "jdbc:mysql://localhost:3306/aluno";
-    private static final String USER_BD = "root1";
-    private static final String PWD_BD = "root";
+    private static final String USER_BD = "root";
+    private static final String PWD_BD = "";
     
     public static Connection getConnection(){
         

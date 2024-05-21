@@ -231,9 +231,9 @@ public class Login extends javax.swing.JFrame {
         //System.out.println("Clicou");
         String Email, Password, query, fname = null, passDB = null;
         String URL_DB, USER_BD, PWD_BD;
-        URL_DB = "jdbc:mysql://cluster-db-azure.mysql.database.azure.com:3306/login";
-        USER_BD = "danillo";
-        PWD_BD = "rootD@n1llo";
+        URL_DB = "jdbc:mysql://localhost:3306/java_user_database";
+        USER_BD = "root1";
+        PWD_BD = "root";
         int notFound = 0;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
