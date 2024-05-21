@@ -1,7 +1,10 @@
-
-CREATE DATABASE IF NOT EXISTS login;
-USE login;
-CREATE TABLE IF NOT EXISTS user
+/*
+mysql -h cluster-db-azure.mysql.database.azure.com -u danillo -p ''
+Enter Password:
+*/
+CREATE DATABASE java_user_database;
+USE java_user_database;
+CREATE TABLE user
 (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     full_name VARCHAR(127),
@@ -9,6 +12,4 @@ CREATE TABLE IF NOT EXISTS user
     password VARCHAR(127)
 );
 
-SHOW TABLES;
-DESC user;
 SELECT * FROM user;

@@ -159,15 +159,15 @@ public class Login extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LeftLayout.createSequentialGroup()
                 .addGap(0, 28, Short.MAX_VALUE)
                 .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LoginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
                     .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
                     .addGroup(LeftLayout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(LoginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29))
         );
         LeftLayout.setVerticalGroup(
@@ -231,8 +231,8 @@ public class Login extends javax.swing.JFrame {
         //System.out.println("Clicou");
         String Email, Password, query, fname = null, passDB = null;
         String URL_DB, USER_BD, PWD_BD;
-        URL_DB = "jdbc:mysql://localhost:3306/java_user_database";
-        USER_BD = "root1";
+        URL_DB = "jdbc:mysql://localhost:3306/java_user_database";//"jdbc:mysql://cluster-db-azure.mysql.database.azure.com/java_user_database";
+        USER_BD = "root";
         PWD_BD = "root";
         int notFound = 0;
         try {
@@ -240,9 +240,9 @@ public class Login extends javax.swing.JFrame {
             Connection con = DriverManager.getConnection(URL_DB, USER_BD, PWD_BD);
             Statement st = con.createStatement();
             if ("".equals(email.getText())) {
-                JOptionPane.showMessageDialog(new JFrame(), "E-mail é Obrigatório", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(new JFrame(), "E-mail ï¿½ Obrigatï¿½rio", "Error", JOptionPane.ERROR_MESSAGE);
             } else if ("".equals(password.getText())) {
-                JOptionPane.showMessageDialog(new JFrame(), "Password é Obrigatório", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(new JFrame(), "Password ï¿½ Obrigatï¿½rio", "Error", JOptionPane.ERROR_MESSAGE);
             } else {
                 Email = email.getText();
                 Password = password.getText();
@@ -262,7 +262,7 @@ public class Login extends javax.swing.JFrame {
                     HomeFrame.setLocationRelativeTo(null);
                     this.dispose();
                 } else {
-                    JOptionPane.showMessageDialog(new JFrame(), "E-mail ou Senha estão incorretos. Digite novamente", "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(new JFrame(), "E-mail ou Senha estï¿½o incorretos. Digite novamente", "Error", JOptionPane.ERROR_MESSAGE);
                 }
                 password.setText("");
             }
